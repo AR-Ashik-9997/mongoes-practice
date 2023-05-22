@@ -4,11 +4,11 @@ import { HydratedDocument, Model } from "mongoose";
 
 export interface IBook {
   title: string;
-  author: string;
+  author: string[];
   genre: string;
   publicationYear: number;
   rating: number;
-  price: string;
+  price: string|number;
   publisher: {
     name: string;
     location: string;

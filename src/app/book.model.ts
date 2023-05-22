@@ -9,7 +9,7 @@ const bookSchema = new Schema<IBook, BookModel>({
     required: true,
   },
   author: {
-    type: String,
+    type: [String],
     required: true,
   },
   genre: {
