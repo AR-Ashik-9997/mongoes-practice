@@ -1,12 +1,6 @@
 import { IBook } from "./book.interface";
 import Book from "./book.model";
 
-export const createBook = async (payload: IBook): Promise<IBook> => {
-  const data = new Book(payload);
-  await data.save();
-  return data;
-};
-
 // find all books in the "Books" collection with a specific genre,such as "Fantasy"
 export const getAllBooksByGenre = async (
   genre: string
