@@ -9,7 +9,7 @@ import {
 const router = express.Router();
 
 // find all books in the "Books" collection with a specific genre for query parameters
-router.get("/books", getAllBooksByGenreController);
+router.get("/books/:genre", getAllBooksByGenreController);
 
 // Implement a MongoDB query to find books in the "Books" collection with a specific genre and published by params id
 router.get("/books/:genre/:publisher", getBooksByGenre_published_Controller);

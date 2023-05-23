@@ -13,7 +13,7 @@ export const getAllBooksByGenreController = async (
   res: Response
 ) => {
   try {
-    const genre = req.query.genre as string;
+    const genre = req.params.genre;
     const bookData = await getAllBooksByGenre(genre);
     res.status(201).json({ status: "Success", data: bookData });
   } catch (err) {
