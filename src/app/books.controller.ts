@@ -6,13 +6,14 @@ import {
   updatePrices,
 } from "./book.service";
 
+
 // find all books in the "Books" collection with a specific genre,such as "Fantasy"
 export const getAllBooksByGenreController = async (
   req: Request,
   res: Response
 ) => {
   try {
-    const genre = req.params.genre;
+    const genre = req.query.genre as string;
     const bookData = await getAllBooksByGenre(genre);
     res.status(201).json({ status: "Success", data: bookData });
   } catch (err) {

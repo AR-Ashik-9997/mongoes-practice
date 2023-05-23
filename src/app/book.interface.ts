@@ -14,7 +14,7 @@ export interface IBook {
     location: string;
   };
   reviews: {
-    username: string;
+    user: string;
     comment: string;
   }[];
 }

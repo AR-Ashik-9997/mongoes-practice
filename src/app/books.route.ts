@@ -8,16 +8,16 @@ import {
 
 const router = express.Router();
 
-// find all books in the "Books" collection with a specific genre,such as "Fantasy"
-router.get("/all/:genre", getAllBooksByGenreController);
+// find all books in the "Books" collection with a specific genre for query parameters
+router.get("/books", getAllBooksByGenreController);
 
-// Implement a MongoDB query to find books in the "Books" collection with a specific genre “Sci-Fi” and published by “Roli Books”.
-router.get("/:genre/:publisher", getBooksByGenre_published_Controller);
+// Implement a MongoDB query to find books in the "Books" collection with a specific genre and published by params id
+router.get("/books/:genre/:publisher", getBooksByGenre_published_Controller);
 
 // add featured fiellds using aggregation and static methods
-router.get("/featured-book", getStaticMethod);
+router.get("/books/featured-book", getStaticMethod);
 
 // update book price type after publising year 2020 
-router.get("/update-bookprice", updated_Book_price);
+router.get("/books/update-bookprice", updated_Book_price);
 
 export default router;

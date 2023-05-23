@@ -25,7 +25,7 @@ const bookSchema = new Schema<IBook, BookModel>({
     required: true,
   },
   price: {
-    type: String,
+    type: Schema.Types.Mixed,
     required: true,
   },
   publisher: {
@@ -40,7 +40,7 @@ const bookSchema = new Schema<IBook, BookModel>({
   },
   reviews: [
     {
-      username: {
+      user: {
         type: String,
         required: true,
       },
